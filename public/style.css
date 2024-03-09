@@ -32,7 +32,7 @@
   align-items: center;
   padding: 50px;
   margin: 100px 0;
-  background: linear-gradient(rgba(251, 251, 251, 1), rgba(251, 251, 251, 0.8));
+  background: var(--light-gray-color);
   border-radius: 8px;
 }
 
@@ -44,12 +44,16 @@
   font-size: 24px;
   padding: 50px;
   margin: 100px 0;
-  background: linear-gradient(rgba(251, 251, 251, 1), rgba(251, 251, 251, 0.8));
+  background: var(--light-gray-color);
   border-radius: 8px;
 }
 
 .welcome-title h1 {
   color: var(--primary-color);
+}
+
+.welcome-title p {
+  font-size: 20px;
 }
 
 #start-quiz-button {
@@ -58,7 +62,7 @@
   border: 2px solid #ffff;
   padding: 20px 50px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -76,19 +80,19 @@
   text-align: center;
   border-radius: 8px;
   margin: auto;
-  width: 50%;
+  width: 70%;
 }
 
 .q-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
 }
 
 .footer-section {
   display: flex;
   align-items: center;
-  justify-content: end;
+  /* justify-content: end; */
 }
 
 .footer-section span {
@@ -100,16 +104,21 @@
   color: var(--gray-color);
 }
 
-.cta-btns button:last-child {
-  margin-left: 15px;
+.cta-btns {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  gap: 20px;
 }
+
+/* .cta-btns button:last-child {} */
 
 #restart-quiz-button {
   background: var(--light-secondary-color);
   padding: 14px 24px;
   border-radius: 8px;
   border: 0.1px solid var(--secondary-color);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--secondary-color);
   cursor: pointer;
 }
@@ -123,7 +132,7 @@
   padding: 14px 24px;
   border-radius: 8px;
   border: 0.1px solid var(--primary-color);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--primary-color);
   cursor: pointer;
 }
@@ -148,12 +157,12 @@ ul {
 }
 
 .question-counter {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--gray-color);
 }
 .correct-answers-counter {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--primary-color);
 }
@@ -171,6 +180,7 @@ ul {
 }
 
 #question-text h2 {
+  font-size: 28px;
   text-align: center;
 }
 
@@ -183,6 +193,7 @@ ul {
 }
 
 .answer-element {
+  font-size: 24px;
   position: relative;
   border-radius: 8px;
   padding: 20px;
@@ -190,7 +201,7 @@ ul {
   border: 0.1px solid var(--light-gray-color);
   border-radius: 8px;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--light-white-color);
 }
 
 .answer-element:not(.nohover):hover {
@@ -236,16 +247,36 @@ ul {
 }
 
 /* When the browser screen is 800px or less */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 8px;
+    margin: auto;
+    width: 90%;
+  }
+  
+  .q-container {
+    gap: 8px;
+  }
+
   .welcome-title h1 {
     font-size: 24px;
   }
 
   #question-text h2,
   .results-page {
-    font-size: 18px;
+    font-size: 24px;
     word-break: break-word;
   }
+  
+  .question-counter, .correct-answers-counter {
+    font-size: 24px;
+  }
+  
   .answers-list {
     display: grid;
     grid-column-gap: 30px;
@@ -254,29 +285,70 @@ ul {
     padding: 0;
   }
 
+  .answer-element {
+    font-size: 24px;
+    padding: 16px;
+  }
+
   #start-quiz-button {
     padding: 14px 32px;
     border-radius: 6px;
     font-size: 16px;
   }
 
+  .cta-btns {
+    display: flex;
+    gap: 20px;
+  }
+
   #restart-quiz-button,
   #next-question-button {
-    padding: 8px 18px;
+    padding: 18px;
     border-radius: 6px;
-    font-size: 12px;
-  }
-
-  .question-counter,
-  .correct-answers-counter {
-    font-size: 14px;
-  }
-
-  .footer-section {
-    justify-content: center;
+    font-size: 18px;
+    flex: 1 1 0;
   }
 
   .centered {
     width: 80%;
   }
+}
+
+/* When the browser screen is 560px or less */
+@media screen and (max-width: 560px) {
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 8px;
+    margin: auto;
+    width: 90%;
+  }
+
+  #restart-quiz-button, #next-question-button {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  #question-text h2,
+  .results-page {
+    font-size: 20px;
+    word-break: break-word;
+  }
+
+  .answer-element {
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  .q-container {
+    gap: 8px;
+  }
+  
+  .question-counter, .correct-answers-counter {
+    font-size: 18px;
+  }
+
 }
