@@ -55,7 +55,6 @@ export const initQuestionPage = () => {
           if (answer.dataset.key === currentQuestion.correct) {
             answer.classList.add('answer-correct-value');
           }
-          console.log(answer);
           answer.classList.add('nohover');
           answer.style.pointerEvents = 'none';
         });
