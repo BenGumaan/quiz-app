@@ -258,7 +258,7 @@ ul {
     margin: auto;
     width: 90%;
   }
-  
+
   .q-container {
     gap: 8px;
   }
@@ -272,11 +272,12 @@ ul {
     font-size: 24px;
     word-break: break-word;
   }
-  
-  .question-counter, .correct-answers-counter {
+
+  .question-counter,
+  .correct-answers-counter {
     font-size: 24px;
   }
-  
+
   .answers-list {
     display: grid;
     grid-column-gap: 30px;
@@ -327,7 +328,8 @@ ul {
     width: 90%;
   }
 
-  #restart-quiz-button, #next-question-button {
+  #restart-quiz-button,
+  #next-question-button {
     padding: 14px;
     font-size: 16px;
   }
@@ -346,9 +348,9 @@ ul {
   .q-container {
     gap: 8px;
   }
-  
-  .question-counter, .correct-answers-counter {
+
+  .question-counter,
+  .correct-answers-counter {
     font-size: 18px;
   }
-
 }
