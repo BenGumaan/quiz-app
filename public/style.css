@@ -199,23 +199,6 @@ ul {
   color: var(--blue-color);
 }
 
-.answer-element:not(.nohover):hover > .key {
-  background: var(--blue-color);
-  color: var(--light-white-color);
-}
-
-.key {
-  font-size: 20px;
-  background: var(--light-white-color);
-  width: fit-content;
-  display: block;
-  position: absolute;
-  padding: 18px 32px;
-  top: 0;
-  left: 0;
-  border-radius: 8px;
-}
-
 .answer-selected {
   background-color: var(--answer-selected-color);
 }
@@ -224,18 +207,10 @@ ul {
   background-color: var(--answer-correct-light);
   color: var(--answer-correct-dark);
 }
-.answer-correct-key {
-  background-color: var(--answer-correct-dark);
-  color: #ffff;
-}
 
 .answer-incorrect-value {
   background-color: var(--answer-incorrect-light);
   color: var(--answer-incorrect-dark);
-}
-.answer-incorrect-key {
-  background-color: var(--answer-incorrect-dark);
-  color: #ffff;
 }
 
 .current-scores {

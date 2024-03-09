@@ -54,8 +54,8 @@ export const initQuestionPage = () => {
         answerElements.forEach((answer) => {
           if (answer.dataset.key === currentQuestion.correct) {
             answer.classList.add('answer-correct-value');
-            answer.firstElementChild.classList.add('answer-correct-key');
           }
+          console.log(answer);
           answer.classList.add('nohover');
           answer.style.pointerEvents = 'none';
         });
@@ -68,7 +68,6 @@ export const initQuestionPage = () => {
 
       const answerIncorrect = function () {
         answerElement.classList.add('answer-incorrect-value');
-        answerElement.firstElementChild.classList.add('answer-incorrect-key');
         answerInactive();
       };
 
